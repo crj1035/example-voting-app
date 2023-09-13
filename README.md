@@ -1,4 +1,4 @@
-# Modif pour tester hook jenkins 2
+# Modif pour tester hook jenkins
 
 # Example Voting App
 
