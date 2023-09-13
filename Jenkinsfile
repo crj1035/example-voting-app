@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "ok depuis le Jenkinsfile qui se trouve sur github ???"
+echo "ok depuis le Jenkinsfile qui se trouve sur github ????"
