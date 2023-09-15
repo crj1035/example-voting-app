@@ -7,6 +7,8 @@ pipeline {
         stage('Build')
         {
             steps {
+                sh 'node --version'
+                sh 'python --version'
                 sh 'echo arrivé jusque là'
                 //sh 'npm '
             }
