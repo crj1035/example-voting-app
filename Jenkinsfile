@@ -17,8 +17,10 @@ pipeline {
         }
         stage('Compilation de vote')
         {
-            sh 'npm git@github.com:crj1035/example-voting-app/vote'
-            sh 'compilation terminée'
+            steps {
+                sh 'npm git@github.com:crj1035/example-voting-app/vote'
+                sh 'compilation terminée'
+            }
         }
         
         /*
