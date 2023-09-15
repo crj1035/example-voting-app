@@ -1,7 +1,4 @@
 pipeline {
-    agent {
-        label 'python'
-    }
     tools {
         nodejs 'NodeJS 20.6.1'
     }
@@ -10,7 +7,7 @@ pipeline {
         {
             steps {
                 sh 'node --version'
-                sh 'python --version'
+                sh 'python3 --version'
                 sh 'echo arrivé jusque là'
                 //sh 'npm '
             }
