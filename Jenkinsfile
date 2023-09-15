@@ -1,26 +1,26 @@
 pipeline {
     agent any
+    //def image-vote
+    //def image-result
+    //def image-worker
     tools {
         nodejs 'NodeJS 20.6.1'
     }
     stages {
-        stage('Build')
+        stage('Versions')
         {
             steps {
                 sh 'node --version'
                 sh 'python3 --version'
                 sh 'echo arrivé jusque là'
-                //sh 'npm '
             }
         }
-        /*
-        stage('Generate')
+        stage('Compilation de vote')
         {
-            steps {
-                sh 'mvn generate-test-resources process-test-resources'
-            }
+            sh 'npm git@github.com:crj1035/example-voting-app/vote'
+            sh 'compilation terminée'
         }
-        */
+        
         /*
         stage('Compile') {
             steps {
