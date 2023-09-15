@@ -1,15 +1,25 @@
 pipeline {
     agent any
     tools {
-        maven 'maven 3.9.4'
+        nodejs 'NodeJS 20.6.1'
     }
     stages {
+        stage('Build')
+        {
+            steps {
+                sh 'echo arrivé jusque là'
+                //sh 'npm '
+            }
+        }
+        /*
         stage('Generate')
         {
             steps {
                 sh 'mvn generate-test-resources process-test-resources'
             }
         }
+        */
+        /*
         stage('Compile') {
             steps {
                 sh 'mvn compile'
@@ -39,6 +49,7 @@ pipeline {
                     }
                }
         }
+        */
     }
 }
 
