@@ -1,5 +1,3 @@
-# Modif pour tester hook jenkins 2
-
 # Example Voting App
 
 A simple distributed application running across multiple Docker containers.
