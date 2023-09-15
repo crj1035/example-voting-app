@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'python'
+    }
     tools {
         nodejs 'NodeJS 20.6.1'
         python 'python:3.11.5-alpine3.18'
