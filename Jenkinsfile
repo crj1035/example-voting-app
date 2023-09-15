@@ -7,7 +7,6 @@ pipeline {
         {
             steps {
                 sh 'node --version'
-                sh 'python3 --version'
                 sh 'echo arrivé jusque là'
                 //sh 'npm '
             }
