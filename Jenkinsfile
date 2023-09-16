@@ -6,11 +6,7 @@ pipeline {
     tools {
         nodejs 'NodeJS 20.6.1'
     }
-    environment 
-   { 
-       // replace xyz with the copy pasted iD
-       //GitHubUser = credentials('00759f27-a2d5-474d-92d6-ffe34bd19922')  
-   }
+    // Credentials 00759f27-a2d5-474d-92d6-ffe34bd19922 
     stages {
         stage('Versions')
         {
