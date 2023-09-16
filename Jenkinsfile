@@ -9,7 +9,7 @@ pipeline {
     environment 
    { 
        // replace xyz with the copy pasted iD
-       GitHubUser = credentials('00759f27-a2d5-474d-92d6-ffe34bd19922')  
+       //GitHubUser = credentials('00759f27-a2d5-474d-92d6-ffe34bd19922')  
    }
     stages {
         stage('Versions')
@@ -23,10 +23,7 @@ pipeline {
         {
             steps {
                 sh 'rm -rf /example-voting-app'
-                git branch: 'main',
-                credentialsId: '00759f27-a2d5-474d-92d6-ffe34bd19922',
-                url: 'git@github.com/crj1035/example-voting-app.git'
-                git clone 
+                git clone 'git@github.com/crj1035/example-voting-app.git'
             }
         }
         /*
