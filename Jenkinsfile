@@ -1,4 +1,4 @@
-node {
+pipeline {
     def imgvote
     def imgresult
     def imgworker
@@ -31,9 +31,11 @@ node {
             }
         }
         stage('Build des 3 images') {
-            imgvote = docker.build(crj1035/example-voting-vote)
-            imgresult = docker.build(crj1035/example-voting-result)
-            imgworker = docker.build(crj1035/example-voting-worker)
+            steps {
+                imgvote = docker.build(crj1035/example-voting-app/vote)
+                imgresult = docker.build(crj1035/example-voting-app/result)
+                imgworker = docker.build(crj1035/example-voting-app/worker)
+            }
         }
 /*        stage('Test image') {
             docker.image('crj1035/example-voting-app').withRun('-p 20000:5000')
