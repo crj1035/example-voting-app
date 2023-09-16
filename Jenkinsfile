@@ -23,7 +23,8 @@ pipeline {
         {
             steps {
                 sh 'rm -rf /example-voting-app'
-                git clone 'git@github.com/crj1035/example-voting-app.git'
+                //git clone 'git@github.com/crj1035/example-voting-app.git'
+                git clone 'https://github.com/crj1035/example-voting-app.git'
             }
         }
         /*
