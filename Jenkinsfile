@@ -29,17 +29,13 @@ pipeline {
                 sh 'git clone https://github.com/crj1035/example-voting-app.git'
             }
         }
-        /*
-        stage('Compile') {
-            steps {
-                sh 'mvn compile'
-            }
-        }
         stage('Test') {
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true -DtestFailureIgnore=true test'
+                sh 'ls -la'
+                //sh 'cd '
             }
         }
+        /*
         stage('Generate Jar') {
             steps {
                 sh 'mvn -Dmaven.test.failure.ignore=true -DtestFailureIgnore=true package'
