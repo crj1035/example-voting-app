@@ -31,8 +31,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'ls -la'
-                //sh 'cd '
+                sh 'cd result/tests && ls -la' 
+                sh './test.sh'
             }
         }
         /*
