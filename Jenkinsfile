@@ -32,7 +32,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'cd result/tests && ls -la' 
-                sh './test.sh'
+                sh './tests.sh'
             }
         }
         /*
