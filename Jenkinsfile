@@ -18,7 +18,7 @@ pipeline {
         {
             steps {
                 sh 'rm -rf /example-voting-app'
-                sh 'git branch main, credentialsId 00759f27-a2d5-474d-92d6-ffe34bd19922, url https://github.com/crj1035/example-voting-app'
+                withCredentials([gitUsernamePassword(credentialsId: '00759f27-a2d5-474d-92d6-ffe34bd19922', gitToolName: 'Default')]) {
             }
         }
         
