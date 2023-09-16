@@ -1,7 +1,7 @@
 node {
-    def imgvote
+    /*def imgvote
     def imgresult
-    def imgworker
+    def imgworker*/
     agent any
     
     tools {
