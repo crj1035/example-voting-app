@@ -31,9 +31,9 @@ node {
             }
         }
         stage('Build des 3 images') {
-            image-vote = docker.build(crj1035/example-voting-vote)
-            image-result = docker.build(crj1035/example-voting-result)
-            image-worker = docker.build(crj1035/example-voting-worker)
+            imgvote = docker.build(crj1035/example-voting-vote)
+            imgresult = docker.build(crj1035/example-voting-result)
+            imgworker = docker.build(crj1035/example-voting-worker)
         }
 /*        stage('Test image') {
             docker.image('crj1035/example-voting-app').withRun('-p 20000:5000')
