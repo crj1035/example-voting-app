@@ -1,5 +1,9 @@
-pipeline {
+node {
+    def image-vote
+    def image-result
+    def image-worker
     agent any
+    
     tools {
         nodejs 'NodeJS 20.6.1'
     }
@@ -27,9 +31,6 @@ pipeline {
             }
         }
         stage('Build des 3 images') {
-            def image-vote
-            def image-result
-            def image-worker
             image-vote = docker.build(crj1035/example-voting-vote)
             image-result = docker.build(crj1035/example-voting-result)
             image-worker = docker.build(crj1035/example-voting-worker)
