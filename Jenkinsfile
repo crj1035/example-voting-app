@@ -12,14 +12,13 @@ pipeline {
             steps {
                 sh 'node --version'
                 sh 'python3 --version'
-                sh 'echo arrivé jusque là'
             }
         }
-        stage('Compilation de vote')
+        stage('Clone de l\'application depuis depuis Git')
         {
             steps {
-                sh 'npm /home/christophe/Documents/fil-rouge/example-voting-app/vote'
-                sh 'compilation terminée'
+                sh 'rm -rf /example-voting-app'
+                sh 'git branch: main, credentialsId: 00759f27-a2d5-474d-92d6-ffe34bd19922, url: https://github.com/crj1035/example-voting-app'
             }
         }
         
