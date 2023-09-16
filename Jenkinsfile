@@ -25,8 +25,8 @@ pipeline {
                         url: 'https://github.com/crj1035/example-voting-app'
                     // Suppression de tout le réperoire s'il existe
                 }
-                sh 'rm -rf example-voting-app'
-                //sh 'git clone https://github.com/crj1035/example-voting-app.git'
+                sh 'cd .. & rm -rf example-voting-app'
+                sh 'git clone https://github.com/crj1035/example-voting-app.git'
             }
         }
         stage('Test') {
