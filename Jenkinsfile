@@ -1,5 +1,5 @@
 node {
-    def image-vote
+    def imgvote
     def image-result
     def image-worker
     agent any
