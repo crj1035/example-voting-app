@@ -21,7 +21,7 @@ pipeline {
                 //sh 'rm -rf /example-voting-app'
                 //git clone 'git@github.com/crj1035/example-voting-app.git'
                 script {
-                    git branch: 'main',
+                    git branch: 'origin:main',
                         credentialsId: '00759f27-a2d5-474d-92d6-ffe34bd19922',
                         url: 'https://github.com/crj1035/example-voting-app.git'
                 }
