@@ -14,14 +14,14 @@ pipeline {
                 sh 'python3 --version'
             }
         }
-        stage('Clone de l\'application depuis depuis Git')
+        stage('Clone de l\'application depuis Git')
         {
             steps {
                 sh 'rm -rf /example-voting-app'
                 withCredentials([gitUsernamePassword(credentialsId: '00759f27-a2d5-474d-92d6-ffe34bd19922', gitToolName: 'Default')]) {
+                }
             }
         }
-        
         /*
         stage('Compile') {
             steps {
