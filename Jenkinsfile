@@ -23,7 +23,7 @@ pipeline {
                 script {
                     git branch: 'main',
                         credentialsId: '00759f27-a2d5-474d-92d6-ffe34bd19922',
-                        url: 'git@github.com/crj1035/example-voting-app.git'
+                        url: 'https://@github.com/crj1035/example-voting-app.git'
                 }
             }
         }
