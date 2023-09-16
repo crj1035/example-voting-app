@@ -1,7 +1,7 @@
 node {
     def imgvote
-    def image-result
-    def image-worker
+    def imgresult
+    def imgworker
     agent any
     
     tools {
