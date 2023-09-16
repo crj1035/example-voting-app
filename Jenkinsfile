@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    //def image-vote
-    //def image-result
-    //def image-worker
+    def image-vote
+    def image-result
+    def image-worker
     tools {
         nodejs 'NodeJS 20.6.1'
     }
@@ -29,12 +29,15 @@ pipeline {
                 sh 'git clone https://github.com/crj1035/example-voting-app.git'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'cd result/tests && ls -la' 
-                sh './tests.sh'
-            }
+        stage('Build des 3 images') {
+            image-vote = docker.build(crj1035/example-voting-vote)
+            image-result = docker.build(crj1035/example-voting-result)
+            image-worker = docker.build(crj1035/example-voting-worker)
         }
+/*        stage('Test image') {
+            docker.image('crj1035/example-voting-app').withRun('-p 20000:5000')
+        }
+ */
         /*
         stage('Generate Jar') {
             steps {
