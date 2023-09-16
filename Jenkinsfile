@@ -1,4 +1,4 @@
-pipeline {
+node {
     def imgvote
     def imgresult
     def imgworker
